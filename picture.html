@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相册照片</title>
+    <link rel="stylesheet" href="css/picture.css">
+</head>
+<body>
+<!--主体内容-->
+<div id="content">
+    <div class="upload">
+        <button class="return">返回</button>
+        <div class="picShow">
+            上传照片
+            <input type="file" id="picHid" title="点我上传照片">
+        </div>
+    </div>
+    <!--相册照片显示区-->
+    <div class="pictures">
+        <ul>
+            <!--相册对应照片示例-->
+            <li>
+                <div class="pic">
+                    <img src="images/picture/default/01.jpg" alt=""
+                         onerror="this.src='images/picture/default/01.jpg'">
+                    <div class="cover"></div>
+                </div>
+                <div class="delBtn">
+                    <a href="javascript:;">删除</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/***********************请求到首页的主体内容样式**********************/
+#content{
+    width:860px;
+    height:auto;
+    margin:0 auto;
+    border-radius:10px;
+    padding-bottom: 20px;
+    background-color: transparent;
+}
+/*上方按钮区域*/
+#content .upload{
+    width:100%;
+    height:50px;
+    border-radius:10px;
+    padding:5px 20px;
+    background-color: #fff;
+}
+
+/*上传照片控件样式*/
+#content .upload .picShow {
+    float:right;
+    color:#fff;
+    padding:10px 6px;
+    display: inline-block;
+    text-align: center;
+    border-radius:10px;
+    background-color: lightblue;
+    position: relative;
+    overflow: hidden;
+}
+#content .upload #picHid{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    filter:alpha(opacity=0);
+    opacity: 0;
+}
+
+/*返回相册页面的按钮*/
+#content .upload .return{
+    width:80px;
+    height:40px;
+    float:right;
+    color:#fff;
+    cursor: pointer;
+    margin-left:10px;
+    text-align: center;
+    border-radius:10px;
+    background-color: pink;
+}
+
+/***********************显示相册照片区域样式**********************/
+#content .pictures{
+    width:100%;
+    height:auto;
+    margin-top:10px;
+    border-radius:10px;
+    background-color: #fff;
+}
+/*清除浮动*/
+#content .pictures:after{
+    clear:both;
+    display:block;
+    content:" ";
+}
+
+.pictures ul li{
+    width:260px;
+    height:180px;
+    background-color: #ccc;
+    float:left;
+    margin:20px 0 20px 20px;
+    position: relative;
+}
+.pictures ul li .pic,.pic img{
+    width:100%;
+    height:100%;
+}
+/*蒙版样式*/
+.pic .cover{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(255,255,255,0.4);
+}
+
+/*删除键样式*/
+.pictures ul li .delBtn{
+    width:100%;
+    height:30px;
+    position: absolute;
+    top:0;
+    left:0;
+    display: none;
+}
+ .delBtn a{
+    width:50px;
+    height:30px;
+    line-height: 30px;
+    color:#fff;
+    text-align: center;
+    border-radius:5px;
+    background-color: red;
+    position: absolute;
+    top:5px;
+    left:5px;
+}
+

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人空间</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!--文档头部-->
+    <header>
+        <!--导航栏-->
+        <nav>
+            <div class="logo">
+                <span class="owner" onclick="window.location.reload();" >xxx的个人空间</span>
+            </div>
+            <ul id="slider">
+                <li id="btn">换肤</li>
+                <li id="oper">资料设置</li>
+                <li id="myMusic" onclick="changeContent('music.html');" >我的音乐</li>
+                <li onclick="changeContent('album.html');">我的相册</li>
+                <li onclick="changeContent('diary.html');">我的日记</li>
+            </ul>
+            <!--背景音乐播放按键-->
+            <input id="music" type="image" src="images/index/pause.png" >
+            <!--为背景音乐占位-->
+            <audio src="" >您的浏览器不支持</audio>
+        </nav>
+    </header>
+
+<!--文档主体-->
+    <main class="container" >
+        <!--左边侧边栏-->
+        <aside class="left">
+            <!--日历-->
+            <div class="calendar">
+                <div class="head">
+                    <div id="prev">&lt;</div>
+                    <div id="yearMonth">yyyy年m月</div>
+                    <div id="next">></div>
+                </div>
+                <ul class="week">
+                    <li>日</li>
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li>六</li>
+                </ul>
+                <!--待插入日期的元素位置-->
+                <div id="date"></div>
+            </div>
+        </aside>
+        <!--中间内容-->
+        <div id="content" class="content" >
+            <!--旋转木马轮播-->
+            <div class="rotate">
+                <ul id="section">
+                    <li><img src="images/index/loop01.jpg" alt=""></li>
+                    <li><img src="images/index/loop02.jpg" alt=""></li>
+                    <li><img src="images/index/loop03.jpg" alt=""></li>
+                    <li><img src="images/index/loop04.jpg" alt=""></li>
+                    <li><img src="images/index/loop05.jpg" alt=""></li>
+                </ul>
+                <!--左右箭头-->
+                <div id="point">
+                    <span class="back"></span>
+                    <span class="forward"></span>
+                </div>
+            </div>
+            <!--无缝滚动-->
+            <div class="run">
+                <ul>
+                    <li><img src="images/index/run01.jpg" alt=""></li>
+                    <li><img src="images/index/run02.jpg" alt=""></li>
+                    <li><img src="images/index/run03.jpg" alt=""></li>
+                    <li><img src="images/index/run04.jpg" alt=""></li>
+                    <li><img src="images/index/run05.jpg" alt=""></li>
+                    <li><img src="images/index/run01.jpg" alt=""></li>
+                    <li><img src="images/index/run02.jpg" alt=""></li>
+                    <li><img src="images/index/run03.jpg" alt=""></li>
+                    <li><img src="images/index/run04.jpg" alt=""></li>
+                    <li><img src="images/index/run05.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <!--右边侧边栏-->
+        <aside class="right">
+            <div class="photo">
+                <img class="headImgInfo" src="images/index/head01.jpg" alt="头像" >
+            </div>
+            <div class="info">
+                <table border="1">
+                    <th colspan="2">我的信息</th>
+                    <tr>
+                        <td>昵称：</td>
+                        <td class="nameInfo"></td>
+                    </tr>
+                    <tr>
+                        <td>性别：</td>
+                        <td class="sexInfo"></td>
+                    </tr>
+                    <tr>
+                        <td>年龄：</td>
+                        <td class="ageInfo"></td>
+                    </tr>
+                    <tr>
+                        <td>生日：</td>
+                        <td class="birthdayInfo"></td>
+                    </tr>
+                </table>
+            </div>
+        </aside>
+    </main>
+
+<!--文档尾部-->
+    <footer></footer>
+
+<!--换肤的蒙版-->
+<div id="panel">
+    <div id="close">
+        <img id="closeImg" src="images/index/close.png" alt="关闭" >
+    </div>
+</div>
+<!--换肤的背景图片选择-->
+<div id="show">
+    <ul  id="select">
+        <li><img src="images/index/bg01.jpg" alt="" name="#91b946"></li>
+        <li><img src="images/index/bg02.jpg" alt="" name="#e6c890"></li>
+        <li><img src="images/index/bg03.jpg" alt="" name="#0144c9"></li>
+        <li><img src="images/index/bg04.jpg" alt="" name="#96dad0"></li>
+        <li><img src="images/index/bg05.jpg" alt="" name="#8c6786"></li>
+        <li><img src="images/index/bg06.jpg" alt="" name="#c9e6f4"></li>
+    </ul>
+</div>
+
+<!--资料修改版块-->
+<div id="personalInfo">
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>头像：</td>
+                <td><img class="headImg" src="images/index/head01.jpg" alt="" ></td>
+                <td>
+                    <div class="file-show">
+                        上传头像
+                        <input id="file-hid" type="file" title="点我上传头像">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>昵称：</td>
+                <td colspan="2"><input type="text" class="name"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td><input type="radio" name="sex" value="男" class="sex" >男</td>
+                <td><input type="radio" name="sex" value="女" class="sex" >女</td>
+            </tr>
+            <tr>
+                <td>年龄：</td>
+                <td colspan="2"> <input type="number" class="age"></td>
+            </tr>
+            <tr>
+                <td> 出生日期：</td>
+                <td colspan="2"> <input type="date" class="birthday"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" id="save">保存</button></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<!--引入jquery文件-->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!--引入自定义js文件-->
+<script src="js/myTools.js"></script>
+<script src="js/index.js"></script>
+<script src="js/diary.js"></script>
+<script src="js/album.js"></script>
+<script src="js/picture.js"></script>
+<script src="js/music.js"></script>
+</body>
+</html>

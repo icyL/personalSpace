@@ -1,0 +1,125 @@
+/***************************请求到首页的主体内容样式********************************/
+#content{
+    width:860px;
+    height:auto;
+    margin:0 auto;
+    border-radius:10px;
+    padding-bottom: 20px;
+    background-color: transparent;
+}
+#content .upload{
+    width:860px;
+    height:50px;
+    border-radius:10px;
+    padding:5px 20px;
+    background-color: #fff;
+}
+
+/*上传音乐控件样式*/
+#content .upload .musicShow {
+    float:right;
+    color:#fff;
+    padding:10px 6px;
+    display: inline-block;
+    text-align: center;
+    border-radius:10px;
+    background-color: lightblue;
+    position: relative;
+    overflow: hidden;
+}
+#content .upload #musicHid{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    filter:alpha(opacity=0);
+    opacity: 0;
+}
+
+/***************************显示添加的音乐区域样式********************************/
+#content .list{
+    width:100%;
+    height:auto;
+    padding:20px 20px 0 20px;
+    margin-top:10px;
+    border-radius:10px;
+    background-color: #fff;
+}
+#content .list ul{
+    width:100%;
+    height:100%;
+}
+.list ul li{
+    width:100%;
+    height:120px;
+    margin-bottom:20px;
+    border-radius:5px;
+    background-color: #ccc;
+}
+/*音乐封面或歌手图片*/
+.list ul li img{
+    width:300px;
+    height:100%;
+    border-radius:5px;
+    float:left;
+    border: 10px solid #ccc;
+}
+
+.list ul li .voice{
+    width:500px;
+    float:left;
+    height:100%;
+    margin-left:10px;
+}
+/*自定义audio控件样式*/
+ .voice .audioStyle{
+    width:500px;
+    height:50px;
+    margin-top:10px;
+}
+.voice .audioStyle audio{
+    width:100%;
+    height:100%;
+}
+
+ /*音乐信息及操作区样式*/
+ .voice .oper{
+     width:500px;
+     height:50px;
+     line-height:60px;
+     vertical-align: middle;
+ }
+
+ /*音乐相关信息*/
+.voice .oper p{
+    float:left;
+    font-size:15px;
+    padding:0 5px;
+}
+.voice .oper p span:first-child{
+    margin-right:20px;
+}
+
+/*音乐相关操作按钮*/
+.voice .del,.voice .btn,.voice .bgMusic{
+     height:30px;
+     padding:0 5px;
+     color:#fff;
+     border-radius:5px;
+     font-size:15px;
+     cursor: pointer;
+     float:right;
+     margin-top:15px;
+ }
+.voice .del{
+    background-color: pink;
+}
+.voice .btn{
+    background-color: lightblue;
+}
+.voice .bgMusic{
+    background-color: lightgreen;
+    margin:15px 5px 0 5px;
+}

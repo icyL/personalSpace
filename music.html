@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景音乐</title>
+    <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+ <!--主体内容-->
+    <div id="content">
+        <div class="upload">
+            <div class="musicShow">
+                上传音乐
+                <input type="file" id="musicHid" title="点我上传照片">
+            </div>
+        </div>
+        <div class="list">
+            <ul>
+                <!--音乐项示例-->
+                <li>
+                    <img src="images/music/01.jpg" alt="封面">
+                    <div class="voice">
+                        <div class="audioStyle">
+                           <audio src="source/01.jpg-萧忆情Alex-《霜雪千年》.mp3"  loop controls>您的浏览器不支持</audio>
+                        </div>
+                       <div class="oper">
+                           <p>
+                               <span>歌手：萧忆情Alex</span>
+                               <span>歌名：《霜雪千年》</span>
+                           </p>
+                           <button class="del">删除</button>
+                           <button class="bgMusic">设为背景音乐</button>
+                           <button class="btn">播放</button>
+                       </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

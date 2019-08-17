@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的相册</title>
+    <link rel="stylesheet" href="css/album.css">
+</head>
+<body>
+<!--主体内容-->
+<div id="content">
+    <div class="upload">
+        <button class="create">创建相册</button>
+    </div>
+    <!--显示相册区域-->
+    <div class="album">
+        <ul id="box">
+            <!--相册项示例-->
+            <li>
+                <a href="javascript:;" onclick="changeContent('picture.html');" title="default">
+                    <img src="images/album/default.jpg" alt=""
+                         onerror="this.src='images/album/default01.jpg' ">
+                </a>
+                <div class="detail">
+                    <p>《默认相册》</p>
+                    <span>*其他</span>
+                    <button class="remove">删除</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--创建相册的蒙版-->
+<div class="panel">
+    <div class="area">
+            相册名称：<input type="text" id="name">
+            <br><br>
+            相册分类：
+            <input type="radio" name="kind" value="*风景">风景&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="kind" value="*萌宠">萌宠&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="kind" value="*小清新">小清新&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="kind" value="*其他">其他
+            <br><br>
+            相册封面：<input type="file" id="coverUpload">
+            <br><br>
+            <input type="submit" value="取消" class="no">
+            <input type="button" value="确定" class="yes">
+    </div>
+</div>
+</body>
+</html>

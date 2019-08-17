@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的日记</title>
+    <link rel="stylesheet" href="css/diary.css">
+</head>
+<body>
+<!--主体内容-->
+    <div id="content">
+        <!--内容的输入发表-->
+        <div class="text">
+            <textarea id="word" placeholder="记录你的心情吧！"></textarea>
+            <div class="tool">
+                <button id="publish" disabled>发表</button>
+            </div>
+        </div>
+        <!--发表过的日记-->
+        <div>
+            <span class="head">Start</span>
+            <!--待插入记录的元素-->
+            <div class="items">
+                <!--记录项示例-->
+                <div class="note">
+                    <p class="top">记录项示例</p>
+                    <p class="bottom">
+                        <span>2019-08-17 12:00:00</span>
+                        <a href="javascript:;" class="delete">删除</a>
+                     </p>
+                </div>
+            </div>
+            <span class="tail">End</span>
+        </div>
+    </div>
+</body>
+</html>
