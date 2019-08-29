@@ -22,18 +22,16 @@ $(function () {
            let kind=$('input:radio[name="kind"]:checked').val() || '未分类';
            if(name!==''){ //如果有起相册名称
                //创建要插入的标签
-               let ele=$(`<li>`+
-                   `<a href="javascript:;" onclick="changeContent('picture.html');"
-                        title="`+kindName+`">`+
-                   `<img src="images/album/`+fileName+`" alt=""  
-                        onerror="this.src='images/album/default01.jpg'">`+
-                   `</a>`+
-                   `<div class="detail">`+
-                       `<p>《`+name+`》</p>`+
-                       `<span>`+kind+`</span>`+
-                       `<button class="remove">删除</button>`+
-                   `</div>`+
-                   `</li>`);
+               let ele=`<li>
+                   <a href="javascript:;" onclick="changeContent('picture.html');" title="${kindName}">
+                     <img src="images/album/${fileName}" alt=""  onerror="this.src='images/album/default01.jpg'">
+                   </a>
+                   <div class="detail">
+                       <p>《${name}》</p>
+                       <span>${kind}</span>
+                       <button class="remove">删除</button>
+                   </div>
+                   </li>`
                //从后插入DOM树
                $(".album>ul").append(ele);
 
