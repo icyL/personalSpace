@@ -16,16 +16,15 @@ $(function () {
         let  fileName  = arr[arr.length-1];
 
         //创建元素 插入DOM树
-        $(".pictures>ul").append($(`<li>`+
-            `<div class="pic">`+
-                `<img src="images/picture/`+kindName+`/`+fileName+`" alt=""
-                    onerror="this.src='images/picture/default/01.jpg'" >`+
-                `<div class="cover"></div>`+
-            `</div>`+
-            `<div class="delBtn">`+
-                `<a href="javascript:;">删除</a>`+
-            `</div>`+
-          `</li>`));
+        $(".pictures>ul").append(`<li>
+            <div class="pic">
+                <img src="images/picture/${kindName}/${fileName}" alt="" onerror="this.src='images/picture/default/01.jpg'" >
+                <div class="cover"></div>
+            </div>
+            <div class="delBtn">
+                <a href="javascript:;">删除</a>
+            </div>
+          </li>`);
 
         //当插入照片过多，撑出的长度过长，则显示滚动条
         if($("#content").height()>640){
