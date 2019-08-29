@@ -16,24 +16,23 @@ $(function () {
         let song=musicInfo[2]||'';
 
         //创建元素
-        let ele=$(`<li>`+
-                    `<img src="images/music/`+img+`" alt="" >`+
-                    `<div class="voice">`+
-                        `<div class="audioStyle">`+
-                            `<audio src="source/`+fileName+`" loop
-                                    controls>您的浏览器不支持</audio>`+
-                         `</div>`+
-                        `<div class="oper">`+
-                            `<p>`+
-                              `<span>歌手：`+singer+`</span>`+
-                              `<span>歌曲：`+song+`</span>`+
-                            `</p>`+
-                            `<button class="del">删除</button>`+
-                            `<button class="bgMusic">设为背景音乐</button>`+
-                            `<button class="btn">播放</button>`+
-                        `</div>`+
-                    `</div>`+
-                `</li>`);
+        let ele=`<li>
+                    <img src="images/music/${img}" alt="" >
+                    <div class="voice">
+                        <div class="audioStyle">
+                            <audio src="source/${fileName}" loop controls>您的浏览器不支持</audio>
+                        </div>
+                        <div class="oper">
+                            <p>
+                              <span>歌手：${singer}</span>
+                              <span>歌曲：${song}</span>
+                            </p>
+                            <button class="del">删除</button>
+                            <button class="bgMusic">设为背景音乐</button>
+                            <button class="btn">播放</button>
+                        </div>
+                    </div>
+                </li>`;
         //插入DOM树
         $(".list>ul").append(ele);
 
