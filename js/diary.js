@@ -29,14 +29,14 @@ $(function () {
        $("#content").on( "click", '#publish',function(){
            //获取用户输入的内容
            let text=$("#word").val();
-           //模板字符串创建要插入的标签
-           let ele=$(`<div class="note">`+
-               `<p class="top">`+text+`</p>`+
-                `<p class="bottom">`+
-                    `<span>`+getCurrentTime()+`</span>`+
-                    `<a href="javascript:;" class="delete">删除</a>`+
-                 `</p>`+
-           `</div>`);
+           //要插入的标签
+           let ele=`<div class="note">
+                       <p class="top">${text}</p>
+                       <p class="bottom">
+                       <span>${getCurrentTime()}</span>
+                           <a href="javascript:;" class="delete">删除</a>
+                       </p>
+                   </div>`;
            //越晚发表的内容越往上排列，即往元素前面插入
           $(".items").prepend(ele);
 
@@ -74,14 +74,16 @@ $(function () {
                let id=$(this).prev().text();
                //删除cookie中对应的内容
                for(let k in jsonObj) {
-                   //如果找到cookie中要删除的那条数据
-                  if(jsonObj[k].id===id){
-                      //从数组中索引为k的位置删除1条数据
-                      jsonObj.splice(k,1);
-                      //再把剩下的内容转换为json字符串
-                      let jsonString=JSON.stringify(jsonObj);
-                      //把该字符串存储到cookie中覆盖原有的字符串内容,设置过期时间为1天
-                      setCookie('diaryData',jsonString,1);
+                  if (jsonObj.hasOwnProperty(k)) {
+                       //如果找到cookie中要删除的那条数据
+                      if(jsonObj[k].id===id){
+                          //从数组中索引为k的位置删除1条数据
+                          jsonObj.splice(k,1);
+                          //再把剩下的内容转换为json字符串
+                          let jsonString=JSON.stringify(jsonObj);
+                          //把该字符串存储到cookie中覆盖原有的字符串内容,设置过期时间为1天
+                          setCookie('diaryData',jsonString,1);
+                      }
                   }
                }
            }
