@@ -61,7 +61,7 @@ function changeCssValue(obj, json){
  * @param year{Number} 当前年份
  * @param month{Number} 当前月份
  * @param title{String} jquery选择器，选择显示年月的元素
- * @param date{St@paramring} jquery选择器，选择要插入日期的元素
+ * @param date{String} jquery选择器，选择要插入日期的元素
  */
 function  drawCalendar(year,month,title,date) {
     $(title).text(year+"年"+month+"月");
